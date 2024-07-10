@@ -1,0 +1,208 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --first-color: hsl(14, 45%, 36%);
+    --second-color: hsl(332, 51%, 32%);
+    --thrid-color: hsl(0, 0%, 100%);
+    --four-color: hsl(330, 100%, 98%);
+    --five-color:  hsl(30, 54%, 90%);
+    --six-color: hsl(30, 18%, 87%);
+    --seven-color: hsl(30, 10%, 34%);
+    --eight-color: hsl(24, 5%, 18%);
+}
+@media(min-width: 768px){
+    .container{
+       width: 750px;
+    }
+}
+@media(min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media(min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+body{
+    font-family: 'Young Serif', serif;
+    background-color: var(--second-color);
+}  
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 10px;
+} 
+@media(max-width: 767px){
+    .container{
+        margin-top: 0;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+.sectionOne , .sectionThree , .sectionFour , .sectionFive{
+    padding: 20px;
+}
+@media(max-width: 767px){
+    .sectionOne{
+        padding: 0;
+    }
+}
+.sectionOne img{
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+@media(max-width: 767px){
+    .sectionOne img{
+        border-radius: 0;
+    }
+}
+.sectionOne  h1 , .sectionTwo h2 , .sectionThree h3 , .sectionFour h4 , .sectionFive h5{
+   color: var(--first-color);
+   font-weight: bold;
+   font-size: 30px;
+}
+@media(max-width: 767px){
+    .sectionOne  h1{
+        font-size: 20px;
+        padding-left: 20px;
+    }
+}
+.sectionOne  p{
+    font-size: 25px;
+    color: black;
+}
+@media(max-width: 767px){
+    .sectionOne p{
+        font-size: 11px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+        padding-left: 20px;
+    }
+}
+.sectionTwo{
+    padding: 20px;
+    background-color: pink;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+.sectionTwo ul , .sectionThree ul{
+    padding-left: 30px;
+    margin-top: 15px;
+}
+.sectionTwo ul li , .sectionThree ul li{
+    margin-top: 10px;
+    padding-left: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    color: gray;
+}
+.sectionTwo ul li span{
+    margin-left: 5px;
+    font-size: 12px;
+    font-weight: 400;
+}
+ul li::marker{
+    color: red;
+}
+ul li::marker{
+   color: red;
+}
+.sectionFour ul{
+    padding-left: 50px;
+    margin-top: 15px;
+}
+.sectionFour ul li{
+    margin-top: 10px;
+    padding-left: 5px;
+    color: black;
+    font-size: 15px;
+    counter-increment: li;
+    position: relative;
+    font-weight: bold;
+}
+@media(max-width: 767px){
+    .sectionFour ul li{
+        font-size: 11px;
+    }
+}
+.sectionFour ul li span{
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+}
+.sectionFour ul li::before{
+    content: "" counter(li);
+    position: absolute;
+    left: -27px;
+}
+ul li::marker{
+   color: red;
+}
+.sectionFive p{
+    font-size: 15px;
+    margin-top: 10px;
+}
+ @media(max-width: 767px){
+    .sectionFive p{
+        font-size: 12px;
+        line-height: 1.5;
+    }
+ }
+ .sectionFive table{
+    width: 100%;
+    border-spacing: 0;
+ }
+ .sectionFive tr:not(:last-child){
+    border-bottom: 1px solid;
+ }
+ .sectionFive td{
+    padding-bottom: 10px;
+    padding-top: 10px;
+ }
+ .sectionFive td:first-child{
+    padding-left: 15px;
+ }
+ .sectionFive td:last-child{
+    color: var(--first-color);
+    font-size: 20px;
+ }
+footer{
+    background-color: darkseagreen;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-size: 20px;
+}
+footer p{
+    margin-top: 10px;
+}
+footer p span{
+    color: var(--thrid-color);
+    transition: 0.5s;
+}
+footer p span:hover{
+    padding-left: 20px;
+    color: var(--first-color);
+}
+footer a{
+    color: var(--thrid-color);
+    margin-bottom: 20px;
+    font-size: 17px;
+}
+footer a:hover{
+    color: var(--first-color);
+}
